@@ -11,6 +11,10 @@ train_data = pd.read_csv('Predict_FAT.csv')
 train_x = train_data[x_rows]
 train_y = train_data[y_rows]
 
+for x in range(len(train_data)):
+    print(x, train_data.iloc[x])
+
+# exit(0)
 # Plot data
 plt.scatter(train_x, train_y)
 plt.plot(train_x, train_y, 'o')

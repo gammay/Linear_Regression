@@ -37,7 +37,9 @@ y_test_prediction = lreg.predict(X_test)
 ys = pd.merge(y_test, pd.DataFrame(y_test_prediction), left_index=True, right_index=True)
 xys = pd.merge(X_test, ys, left_index=True, right_index=True)
 xys.columns = ['X', 'y_truth', 'y_predict']
-print(xys)
+# xys.option_context('display.max_rows', None, 'display.max_columns', None)
+# print(xys)
+print(xys.to_string())
 
 # Performance / errors
 
